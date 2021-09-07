@@ -2,7 +2,7 @@
 
     <div>Logo</div>
     <nav>
-        <a href="#" class="mr-5 hover:text-green-500">Nos Missions</a>
+        <a href="{{ route('jobs.index')}}" class="mr-5 hover:text-green-500">Nos Missions</a>
         @guest
             <a href="{{ route('login') }}" class="mr-5 hover:text-green-500">Se connecter</a>
             <a href="{{ route('register') }}" class="mr-5 hover:text-green-500">S'enregistrer</a>
