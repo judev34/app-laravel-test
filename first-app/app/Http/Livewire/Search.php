@@ -43,6 +43,18 @@ class Search extends Component
         $this->selectedIndex--;
     }
 
+    public function showJob() {
+
+        // dd($this->jobs[$this->selectedIndex]['id']);
+        if ($this->jobs) {
+            return redirect()->route('jobs.show', [$this->jobs[$this->selectedIndex]['id']]); // on recupere l'id de la mission
+        }
+    }
+
+    public function resetIndex() {
+        $this->reset('selectedIndex');
+    }
+
     public function render()
     {
         return view('livewire.search'); // php artisan make:livewire search .. on a crée une class qui étend de componant et qui rend une vue

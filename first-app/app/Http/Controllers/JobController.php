@@ -17,4 +17,11 @@ class JobController extends Controller
         ]); // on appelle la vue index de jobs
 
     }
+
+    public function show(Job $id) {
+        return view('jobs.show', [
+            'job' => $id
+        ]);
+    }
+
 }
